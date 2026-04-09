@@ -16,7 +16,7 @@ run:
 		$(IMAGE_NAME)
 
 stop:
-	@read -p "Nome do container a parar: " CONTAINER_NAME; \
+	@read -p "Nome do container a parar:" CONTAINER_NAME; \
 	docker stop $$CONTAINER_NAME && docker rm $$CONTAINER_NAME
 
 # ---------- ATALHOS HOME/LAB (sem prompts) ----------
