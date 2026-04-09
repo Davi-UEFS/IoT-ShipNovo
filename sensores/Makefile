@@ -40,7 +40,7 @@ run-many-lab:
 	docker pull $(IMAGE_NAME):latest
 	@N=$${N:-20}; \
 	PREFIX=$${PREFIX:-sensor}; \
-	BROKER_IP=$${BROKER_IP:-172.16.103.10:4242}; \
+	BROKER_IP=$${BROKER_IP:-172.16.103.8:4242}; \
 	echo "Subindo $$N sensores (UDP) em $$BROKER_IP (prefixo=$$PREFIX)"; \
 	i=1; \
 	while [ $$i -le $$N ]; do \

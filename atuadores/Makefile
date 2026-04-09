@@ -21,7 +21,7 @@ stop:
 
 # ---------- ATALHOS HOME/LAB (sem prompts) ----------
 
-LAB_IP  = 172.16.103.10
+LAB_IP  = 172.16.103.8
 TCP_PORT = 4343
 
 ACTUATOR_CONTAINER_LAB  = iot-atuador-lab
@@ -37,6 +37,11 @@ run-lab:
 		$(IMAGE_NAME)
 	@docker logs -f $(ACTUATOR_CONTAINER_LAB)
 
+
+stop-lab:
+	@docker rm -f $(ACTUATOR_CONTAINER_LAB) >/dev/null 2>&1 || true
+	@echo OK
+	
 # Uso:
 # make run-many-lab N=10 PREFIX=atuador LAB_IP=172.16.201.9 TCP_PORT=4343
 run-many-lab:

@@ -21,7 +21,7 @@ stop:
 
 # ---------- ATALHOS HOME/LAB (sem prompts) ----------
 
-LAB_IP  = 172.16.103.10
+LAB_IP  = 172.16.103.8
 TCP_PORT = 4343
 
 CLIENT_CONTAINER_LAB  = iot-cliente-lab
