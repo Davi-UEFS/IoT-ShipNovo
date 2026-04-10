@@ -155,24 +155,30 @@ Ao iniciar, o cliente conecta no broker por TCP, faz handshake e abre o menu:
 
 
 <img width="383" height="200" alt="Captura de tela de 2026-04-09 13-50-49" src="https://github.com/user-attachments/assets/bc698238-8323-45e0-8d24-53d373b9a604" />
+</br>
 
+**1) Pedir atuadores**: pede ao broker a lista de atuadores conectados à ele. Antes do broker responder o cliente, ele atualiza todos os atuadores no map.
 
-1. Pedir atuadores pede ao broker a lista de atuadores conectados à ele. Antes de enviar ao cliente, o broker atualiza todos os atuadores.
-2. Mostra todos os atuadores conectados, seu estado e última ação.
-3. Envia comando a um atuador. Você deve digitar o ID do atuador desejado e depois a ação. O minimenu irá aguardar o ACK do broker, informando se obteve sucesso ou não.
+**2) Mostrar atuadores**: Mostra todos os atuadores conectados, seu estado e última ação.
 
+**3) Enviar comandos para atuador**: Envia comando a um atuador. Você deve digitar o ID do atuador desejado e depois a ação. O minimenu irá aguardar o ACK do broker, informando se obteve sucesso ou não.
+
+</br>
 <img width="360" height="205" alt="Captura de tela de 2026-04-09 13-56-17" src="https://github.com/user-attachments/assets/10d75e21-bfca-4c20-95b6-ee794e4521fe" />
+</br>
 <img width="360" height="205" alt="Captura de tela de 2026-04-09 13-56-22" src="https://github.com/user-attachments/assets/ea267b55-4dff-4ef2-8dfb-2b613ae26ec4" />
+</br>
 <img width="443" height="200" alt="Captura de tela de 2026-04-09 13-56-38" src="https://github.com/user-attachments/assets/70f2d949-289c-44a3-8ae8-9bc29b57a413" />
+</br></br>
 
+**4) Mostrar sensores**: Mostra todos os sensores conectados. Não é necessário pedir ao broker, eles chegam automaticamente.
 
-4. Mostra todos os sensores conectados. Não é necessário pedir ao broker, eles chegam automaticamente.
-5. Exibe as notificações. Ao chegar uma, a cor muda para amarelo e um som é tocado.
+**5) Ver notificações**: Exibe as notificações. Ao chegar uma, a cor muda para amarelo e um som é tocado.
 
-<img width="360" height="205" alt="Captura de tela de 2026-04-09 13-53-14" src="https://github.com/user-attachments/assets/671e66e9-7348-4fcb-b5f0-680f65cb8af4" />
+<img width="360" height="205" alt="Captura de tela de 2026-04-09 13-53-14" src="https://github.com/user-attachments/assets/671e66e9-7348-4fcb-b5f0-680f65cb8af4" />\
+</br>
 
-
-6. Encerra o progama. Também desconecta do cliente.
+**6) Sair:** Encerra o progama. Também desconecta do broker.
 
 Fluxo recomendado de uso:
 1. Suba `broker`, pelo menos um `atuador`, e um ou mais `sensores`.
@@ -184,7 +190,7 @@ Fluxo recomendado de uso:
 7. Use `5) Ver notificações` para eventos de adição/remoção e atualizações.
 
 #### ⚠️ Observações
-O "cache"/map local de atuadores só atualiza ao realizar a opção 1. Lembre-se de utilizá-la antes e após enviar um comando. (fix em breve).
+O "cache"/map local de atuadores só atualiza ao realizar a opção 1. Lembre-se de utilizá-la antes e após enviar um comando. **(fix em breve)**.
 
 Fique sempre atento às notificações. Elas podem conter informações críticas, como remoção de sensores/atuadores.
 
