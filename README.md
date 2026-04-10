@@ -64,7 +64,9 @@ Que irá pedir o nome do container a ser removido. stop-lab remove diretamente o
 #### Deadlines
 
 As conexões TCP usam a lógica de ping/pong. A cada 3s, o servidor envia um pacote JSON com uma mensagem "ping". Se o cliente/atuador não responder pong em 4s, a conexão é fechada e o registro sai do map do broker. 
-Para UDP, usa TTL. Se o último pacote de um sensor foi há 20s, a rotina de monitoramento remove do map.
+Para UDP, usa TTL. Se o último pacote de um sensor foi há 20s, a rotina de monitoramento remove-o do map.
+
+Para o handshake inicial, o tempo limite é de 5 segundos.
 
 ### 2.2 `sensores/`
 Responsabilidade:
